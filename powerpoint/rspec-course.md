@@ -1,8 +1,8 @@
 設定檔
 
-spec_helper
+<span style="color:red">spec_helper</span>
 
-rails_helper
+<span style="color:red">rails_helper</span>
 
 ---
 基本語法
@@ -12,34 +12,36 @@ rails_helper
 
 <span style="color:red">describe</span>
 
-<span style="color:blue">context</span>
+<span style="color:red">context</span>
 
-<span style="color:green">it</span>
+<span style="color:red">it</span>
+
+<span style="color:red">specify</span>
 
 ---
 
 <span style="color:red">describe</span> 
 <span style="color:Yellow">"Class/Method Name"</span> do
-<br>
+
  ...
-<br>
-<span style="text-align:left">end</span>
+
+end
 
 ---
-<span style="color: blue"> context </span> 
+<span style="color:red">context</span> 
 <span style="color:Yellow">"Context-Describe"</span> do
-<br>
+
  ...
-<br>
-<span style="text-align:left">end</span>
+
+end
 
 ---
-<span style="color: green"> it </span> 
+<span style="color:red">it</span> 
 <span style="color:Yellow">"Behavior-Describe"</span> do
-<br>
+
  ...
-<br>
-<span style="text-align:left">end</span>
+
+end
 
 ---
 <pre>
@@ -55,9 +57,9 @@ HOOK
 
 <span style="color:red">before</span>
 
-<span style="color:blue">after</span>
+<span style="color:red">after</span>
 
-<span style="color:green">around</span>
+<span style="color:red">around</span>
 
 ---
 <span style="color:red">before(:all)</span> do
@@ -90,27 +92,65 @@ end
 ---
 <span style="color:red">subject</span>
 
-<span style="color:blue">let</span>
+<span style="color:red">let</span>
+
+---
+<pre>
+let(:address) { { street: street, city: city } }let(:street)  { "123 Any Street"               }let(:city)    { "Anytown"                      }
+</pre>
 
 ---
 MOCK
 
+<span style="color:red">Test Doubles</span>
+
+<span style="color:red">Method Stubs</span>
+
+rspec-mocks <https://github.com/rspec/rspec-mocks>
+
+rr <https://github.com/mozilla/rr>
+
 ---
 HTTP MOCK
+
+webmock <https://github.com/bblimke/webmock>
+
+vcr <https://github.com/vcr/vcr>
 
 ---
 TIME MOCK
 
+timecop <https://github.com/travisjeffery/timecop>
+
+delorean <https://github.com/bebanjo/delorean>
+
+---
+FrontEnd Test
+
+capybara <https://github.com/teamcapybara/capybara>
+
+selenium <https://github.com/SeleniumHQ/selenium>
+
 ---
 Shared Example Groups
+
+<span style="color:red">shared_examples_for</span><span style="color:Yellow">"xxx"</span> do
+
+...
+
+end
+
+<span style="color:red">it_behaves_like</span><span style="color:Yellow">"xxx"</span> do
+
+...
+
+end
 
 ---
 factory_girl <https://github.com/thoughtbot/factory_girl>
 
-rspec-html-matchers <https://github.com/kucaahbe/rspec-html-matchers>
+<http://betterspecs.org/zh_tw/>
 
-vcr <https://github.com/vcr/vcr>
+Adam Cuppy <https://www.youtube.com/watch?v=KjENZNjRCWM&t=1228s>
 
-webmock <https://github.com/bblimke/webmock>
-
-rr <https://github.com/mozilla/rr>
+<http://carlos-blog.logdown.com/posts/2016/05/24/rails-pacific-2016-about-adam-cuppy-of-rspec>
